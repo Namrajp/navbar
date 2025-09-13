@@ -5,7 +5,7 @@ const gulp = require("gulp");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify"); // For minifying JS
 const cleanCss = require("gulp-clean-css"); // For minifying CSS
-
+// import "gulp-imagemin" as imagemin; // Optional: for image optimization
 const paths = {
   styles: "src/partials/**/*.css", // CSS files within partials
   scripts: "src/partials/**/*.js", // JS files within partials
@@ -40,10 +40,24 @@ gulp.task("scripts", () => {
     .pipe(uglify()) // Minify the JavaScript
     .pipe(gulp.dest("public/js/")); // Output to dist/js
 });
+// task to handle images
+function imagesTask() {
+  return (
+    src("src/assets/**/*") // Source images
+      // .pipe(imagemin()) // Optional: optimize images
+      .pipe(dest("public/assets/"))
+  ); // Destination for processed images
+}
 // Watch files for changes
 function watchFiles() {
   watch(["src/**/*.html"], htmlInclude);
 }
 
-exports.html = series(htmlInclude, "styles", "scripts");
-exports.default = series(htmlInclude, "styles", "scripts", watchFiles);
+exports.html = series(htmlInclude, imagesTask, "styles", "scripts");
+exports.default = series(
+  htmlInclude,
+  imagesTask,
+  "styles",
+  "scripts",
+  watchFiles
+);
