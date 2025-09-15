@@ -1,0 +1,100 @@
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  max-width: 20vw;
+}
+.social-icons a {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+.social-icons a > i.fab {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #eee;
+  color: #777;
+  filter: grayscale(60%);
+}
+.social-icons a > i.fab:hover {
+  background-color: dodgerblue;
+}
+
+footer {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 100vw;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #aaa;
+}
+footer h4 {
+  margin-top: 2rem;
+}
+
+footer .footer-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+div.top a {
+  color: steelblue;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+form {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  width: 75%;
+  margin-top: 2.5rem;
+  margin: 0 auto;
+}
+form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+}
+form input[type="submit"] {
+  background-color: slategrey;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+  padding: 1rem 0.5rem;
+  width: 30%;
+  font-size: x-large;
+}
+
+.contacts-col {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: #333;
+  color: white;
+  padding: 2rem 5rem;
+  text-align: center;
+}
+
+.contacts-col section i {
+  margin-bottom: 2rem;
+}
+
+.contacts-col:last-of-type {
+  background-color: goldenrod;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.contacts .row {
+  overflow: hidden;
+}
