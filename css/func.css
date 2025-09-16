@@ -1,5 +1,0 @@
-.show-links {
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
