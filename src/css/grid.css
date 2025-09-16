@@ -1,0 +1,60 @@
+/* Mobile first layout complete */
+/* Tablet second layout begin */
+.content-wrap {
+  text-align: center;
+}
+
+section .grid-gallery {
+  height: 100vh;
+}
+
+section .grid-gallery .cell {
+  margin: 1rem;
+  border: 1px solid grey;
+  float: left;
+  min-height: 40vh;
+}
+section .grid-gallery .cell .cell img {
+  display: block;
+  max-width: 100%;
+}
+section .grid-gallery .cell:hover {
+  transform: translateY(-0.4rem);
+  transform: scale(1.2);
+  display: block;
+  background-color: lightgray;
+  color: #fff;
+}
+section .grid-gallery .cell:hover a {
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* Mobile layout complete for gallery , now bigger screens begin */
+@media screen and (min-width: 600px) {
+  section .grid-gallery .cell {
+    width: calc(50% - 2rem);
+  }
+}
+/* Laptop layout begin */
+@media screen and (min-width: 800px) {
+  section .grid-gallery .cell {
+    width: calc(33.3333333333% - 2rem);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .cell {
+    width: calc(25% - 2rem);
+  }
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  font-size: 17px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
