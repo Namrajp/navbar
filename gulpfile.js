@@ -61,3 +61,8 @@ exports.default = series(
   "scripts",
   watchFiles
 );
+
+// gulp is default with watch and gulp html no watch no server in package.json with express
+// using public folder for run, src as input
+// npx gulp html
+// npx gulp
