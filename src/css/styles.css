@@ -25,3 +25,27 @@
   height: 100px;
   font-size: 2rem;
 }
+
+.nav-links a {
+  position: relative;
+}
+.nav-links a:hover {
+  background-color: lightgrey;
+}
+.nav-links a::before {
+  content: " "; /* Required for the pseudo-element to exist */
+  display: block; /* Or inline-block, depending on desired layout */
+  left: 0;
+  bottom: 10px;
+  width: 50px;
+  height: 10px;
+  height: 2px;
+  /* background-color: red; */
+  /* Default color of the pseudo-element */
+  position: absolute; /* Adjust position as needed */
+  top: 100%;
+  transform: translateY(-100%);
+}
+.nav-links a:hover::before {
+  background-color: green;
+}

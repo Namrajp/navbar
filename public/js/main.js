@@ -1,0 +1,1 @@
+let navToggle=document.querySelector(".nav-toggle"),links=document.querySelector(".nav-links"),linksContainer=document.querySelector(".links-container");navToggle.addEventListener("click",function(){var e=links.getBoundingClientRect().height,n=linksContainer.getBoundingClientRect().height;linksContainer.style.height=0===n?e+"px":0});
