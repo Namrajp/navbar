@@ -3,3 +3,27 @@
   flex-direction: column;
   transition: var(--transition);
 }
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.banner > .container {
+  width: 45vw;
+  text-align: center;
+  color: #fff;
+  margin: 6rem auto;
+}
+.banner > .container p {
+  margin-bottom: 2rem;
+}
+.btn-white {
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+  color: #444;
+}
+.section:not(footer.section) {
+  min-height: 100vh;
+  text-align: center;
+}
